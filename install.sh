@@ -21,6 +21,9 @@ ln -sf $HOME/bin/zsh/theme.sh $HOME/bin/zsh/oh-my-zsh/themes/tom.zsh-theme
 echo -e "\e[32m[OK]\e[39m tom.zsh-theme"
 
 # add nano syntax highlighting
+if [ ! -d /usr/share/nano ]; then
+    sudo mkdir /usr/share/nano
+fi
 sudo cp $HOME/bin/common/nano-syntax/*.nanorc /usr/share/nano
 echo -e "\e[32m[OK]\e[39m nano syntax highlighting"
 
