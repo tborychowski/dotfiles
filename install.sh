@@ -27,7 +27,7 @@ if [ ! -d /usr/share/nano ]; then
     sudo mkdir /usr/share/nano
 fi
 sudo cp -f $HOME/bin/common/nano-syntax/*.nanorc /usr/share/nano
-ls /usr/share/nano/*.nanorc | xargs -I {} echo 'include "{}"' >> $HOME/bin/common/nanorc.sh
+# ls /usr/share/nano/*.nanorc | xargs -I {} echo 'include "{}"' >> $HOME/bin/common/nanorc.sh
 echo -e "\e[32m[OK]\e[39m nano syntax highlighting"
 
 echo "Don't forget to install fonts: https://github.com/Lokaltog/powerline-fonts"
