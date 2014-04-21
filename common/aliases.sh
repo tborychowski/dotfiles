@@ -1,5 +1,12 @@
-alias ls='ls --color=auto --group-directories-first'
-alias ll='ls -lAh --group-directories-first'
+unamestr=`uname`
+if [[ "$unamestr" == 'Linux' ]]; then
+	alias ls='ls --color=auto --group-directories-first'
+	alias grep='grep --color=auto'
+elif [[ "$unamestr" == 'Darwin' ]]; then
+	alias ls='ls -G'
+fi
+
+alias ll='ls -lAh'
 alias la='ls -A'
 alias l='ls -CF'
 alias cd..='cd ..'

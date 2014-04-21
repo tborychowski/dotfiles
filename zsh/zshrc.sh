@@ -1,4 +1,4 @@
-export ZSH=$HOME/bin/zsh/.oh-my-zsh	# Path to your oh-my-zsh installation.
+export ZSH=$HOME/bin/zsh/oh-my-zsh	# Path to your oh-my-zsh installation.
 ZSH_THEME="../../tom"			# Set name of the theme to load. Look in ~/.oh-my-zsh/themes/
 # CASE_SENSITIVE="true"			# Uncomment the following line to use case-sensitive completion.
 # DISABLE_AUTO_UPDATE="true"		# Uncomment the following line to disable bi-weekly auto-update checks.

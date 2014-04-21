@@ -16,7 +16,10 @@ bind '"\e[B"':history-search-forward
 PATH="$HOME/bin:$PATH"
 source $HOME/bin/bash/prompt.sh
 source $HOME/bin/common/aliases.sh
-source /usr/share/autojump/autojump.sh
+
+if [ -f /usr/share/autojump/autojump.sh ]
+	. /usr/share/autojump/autojump.sh
+fi
 
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
