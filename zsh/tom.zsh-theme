@@ -30,7 +30,7 @@ prompt_end() {
 prompt_context() {
   local user=`whoami`
   if [[ "$user" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-    prompt_segment 22 default "%(!.%{%F{yellow}%}.)$user@%m"
+    prompt_segment 12 black "%(!.%{%F{yellow}%}.)$user@%m"
   fi
 }
 
@@ -68,7 +68,7 @@ prompt_git() {
 }
 
 prompt_dir() {								# current working directory
-  prompt_segment blue black '%~'
+  prompt_segment 59 black '%~'
 }
 
 # Status: was there an error, am I root, are there background jobs?
