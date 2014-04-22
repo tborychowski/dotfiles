@@ -9,24 +9,17 @@ git clone git://github.com/robbyrussell/oh-my-zsh.git $HOME/bin/zsh/oh-my-zsh
 
 # Install bash & zsh rc files
 ln -sf $HOME/bin/common/nanorc.sh $HOME/.nanorc
-echo -e "\e[32m[OK]\e[39m .nanorc"
+echo -e "[OK] .nanorc"
 
 ln -sf $HOME/bin/bash/bashrc.sh $HOME/.bashrc
-echo -e "\e[32m[OK]\e[39m .bashrc"
+echo -e "[OK] .bashrc"
 
 ln -sf $HOME/bin/zsh/zshrc.sh $HOME/.zshrc
-echo -e "\e[32m[OK]\e[39m .zshrc"
+echo -e "[OK] .zshrc"
 
 ln -sf $HOME/bin/zsh/theme.sh $HOME/bin/zsh/oh-my-zsh/themes/tom.zsh-theme
-echo -e "\e[32m[OK]\e[39m tom.zsh-theme"
+echo -e "[OK] tom.zsh-theme"
 
-
-
-# add nano syntax highlighting
-if [ ! -d /usr/share/nano ]; then
-    sudo mkdir /usr/share/nano
-fi
-# ls $HOME/bin/common/nano-syntax/*.nanorc | xargs -I {} echo 'include "{}"' >> $HOME/bin/common/nanorc.sh
-echo -e "\e[32m[OK]\e[39m nano syntax highlighting"
+$HOME/bin/common/install-nano-syntax.sh
 
 echo "Don't forget to install fonts: https://github.com/Lokaltog/powerline-fonts"
