@@ -31,7 +31,7 @@ prompt_end() {
 prompt_context() {
   local user=`whoami`
   if [[ "$user" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-    prompt_segment 31 black "%(!.%{%F{yellow}%}.)$user@%m"
+    prompt_segment black default "%(!.%{%F{yellow}%}.)$user@%m"
   fi
 }
 
@@ -43,9 +43,9 @@ prompt_git() {
     dirty=$(parse_git_dirty)
     ref=$(git symbolic-ref HEAD 2> /dev/null) || ref="➦ $(git show-ref --head -s --abbrev |head -n1 2> /dev/null)"
     if [[ -n $dirty ]]; then
-      prompt_segment 196 black		# orange
+      prompt_segment red black			# orange
     else
-      prompt_segment 22 black		# green
+      prompt_segment green black		# green
     fi
     if [[ -e "${repo_path}/BISECT_LOG" ]]; then
       mode=" <B>"
@@ -69,7 +69,7 @@ prompt_git() {
 }
 
 prompt_dir() {								# current working directory
-  prompt_segment 59 black '%~'
+  prompt_segment blue black '%~'
 }
 
 # Status: was there an error, am I root, are there background jobs?
