@@ -1,13 +1,5 @@
-##############################################################################
-#
-# Syntax highlighting for CSS files
-#  
-# Author:  Simon Rupf, simon.rupf(a)int-ag.ch
-# License: GPL 2  or later
-#
-# Version: 2005-02-14
-#
-##############################################################################
+## Here is an example for css files.
+##
 
 syntax "css" "\.css$"
 color brightred     "."
@@ -16,4 +8,3 @@ color brightwhite           start=":" end="[;^\{]"
 color brightblue    ":active|:focus|:hover|:link|:visited|:link|:after|:before|$"
 color brightblue    start="\/\*" end="\\*/"
 color green         ";|:|\{|\}"
-

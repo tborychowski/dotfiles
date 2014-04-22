@@ -21,3 +21,5 @@ alias apti='sudo apt-get install'
 alias aptr='sudo apt-get autoremove'
 
 alias gst='git status'
+
+alias subl="open -a Sublime\ Text"
