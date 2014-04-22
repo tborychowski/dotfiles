@@ -1,30 +1,20 @@
-## Here is an example for PHP
+## PHP syntax highlighting
 ##
-syntax "php" "\.php[2345s~]?$"
-
-## php markings
-color brightgreen "(<\?(php)?|\?>)"
-
-## functions
-color white "\<[a-z_]*\("
-
-## types
-color green "\<(var|float|global|double|bool|char|int|enum|const)\>"
-
-## structure
-color brightyellow "\<(class|new|private|public|function|for|foreach|if|while|do|else|elseif|case|default|switch)\>"
-
-## control flow
-color magenta "\<(goto|continue|break|return)\>"
-
-## strings
-color brightyellow "<[^=       ]*>" ""(\.|[^"])*""
-
-## comments
-color brightblue "//.*"
-color brightblue start="/\*" end="\*/"
-#color blue start="<" end=">"
-#color red "&[^;[[:space:]]]*;"
-
-## Trailing whitespace
-color ,green "[[:space:]]+$"
+syntax "php" "\.php$" "\.php[2345s]$" "\.phtml$"
+#functions
+color brightmagenta "([A-Za-z0-9])"
+#numbers
+color brightblue "[0-9]"
+#special
+color brightwhite "(^|[^A-Za-z0-9])(<\?php|\?>|var|and|or|default|class|extends|true|false|global|function|new|switch|case|break|next|prev|elseif|if|else|foreach|for|as|do|while|exit|die|declare|require_once|require|include_once|include|return|echo|static|array|isset)([^A-Za-z0-9])"
+#types
+color brightred "([^A-Za-z0-9])|[^A-Za-z](null|int|string|float|bool|object|resource)[^A-Za-z0-9_]+[^A-Za-z]"
+#strings
+color brightyellow ""(\\.|[^\"])*""
+color brightyellow "'(\\.|[^\'])*'"
+#Variables
+color brightcyan "\$[]\[A-Za-z0-9_'\"]*"
+#comments
+color green "//.*"
+color green "#.*"
+color green start="/\*" end="\*/"
