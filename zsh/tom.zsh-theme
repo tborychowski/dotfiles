@@ -30,7 +30,8 @@ prompt_end() {
 prompt_context() {
   local user=`whoami`
   if [[ "$user" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-    prompt_segment black default "%(!.%{%F{yellow}%}.)$user@%m"
+    #prompt_segment black default "%(!.%{%F{yellow}%}.)$user@%m"
+    prompt_segment 8 default "%(!.%{%F{yellow}%}.)$user@%m"
   fi
 }
 
@@ -84,6 +85,7 @@ prompt_status() {
 ## Main prompt
 build_prompt() {
   RETVAL=$?
+  prompt_context
   prompt_status
   prompt_git
   prompt_dir
@@ -91,7 +93,7 @@ build_prompt() {
 }
 
 rprompt() {
-  echo "%{$FG[242]%} ⌚ %*%{$FX[reset]%}"
+  echo "%{$FG[242]%} ⌚  %*%{$FX[reset]%}"
 }
 
 PROMPT='
