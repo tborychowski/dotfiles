@@ -21,6 +21,7 @@ plugins=(git autojump command-not-found history-substring-search)
 source $ZSH/oh-my-zsh.sh
 source ~/bin/common/aliases.sh
 export PATH="$HOME/bin:$PATH"
+export TERM=xterm-256color
 
 # export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 # unsetopt correctall
