@@ -16,10 +16,12 @@ alias uz='tar -xvzf'
 alias serve='http-server'
 alias xampp='sudo /opt/lampp/manager-linux-x64.run'
 
-alias aptu='sudo apt-get update'
-alias apti='sudo apt-get install'
-alias aptr='sudo apt-get autoremove'
+alias upd='sudo apt update'
+alias inst='sudo apt install'
+alias cln='sudo apt-get autoremove'
 
-alias gst='git status'
+alias gs='git status'
+alias st='/opt/sublime_text/sublime_text'
+#alias gpu="nvidia-settings -q GPUCoreTemp | grep '0.0' | cut -d':' -f3 | cut -d'.' -f 1"
 
-alias subl="open -a Sublime\ Text"
+alias subs='subliminal -l pl --color --'

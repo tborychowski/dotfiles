@@ -1,6 +1,6 @@
 HISTTIMEFORMAT='%b %d %H:%M '
 HISTCONTROL=ignoreboth                          # ignoredups : ignorespace
-HISTIGNORE="history:exit:lsLls -la:ll:j"        # don't record history for these
+HISTIGNORE="history:exit:ls:ls -la:ll"          # don't record history for these
 HISTSIZE=1000
 HISTFILESIZE=2000
 shopt -s histappend             	        # append to the history file, don't overwrite it
@@ -14,13 +14,18 @@ bind '"\e[B"':history-search-forward
 export TERM=xterm-256color
 
 PATH="$HOME/bin:$PATH"
-source $HOME/bin/bash/prompt.sh
-source $HOME/bin/common/aliases.sh
 
-if [ -f /usr/share/autojump/autojump.sh ]
-	. /usr/share/autojump/autojump.sh
-fi
-
+# Bash completions
+set show-all-if-ambiguous on
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-    . /etc/bash_completion
+   . /etc/bash_completion
 fi
+
+# Alias definitions.
+[ -f ~/bin/common/aliases.sh ] && . ~/bin/common/aliases.sh
+    
+# Function definitions.
+[ -f ~/bin/bash/functions.sh ] && . ~/bin/bash/functions.sh
+
+# Prompt definitions.
+[ -f ~/bin/bash/prompt.sh ] && . ~/bin/bash/prompt.sh
