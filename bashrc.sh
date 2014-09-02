@@ -22,10 +22,10 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 # Alias definitions.
-[ -f ~/bin/common/aliases.sh ] && . ~/bin/common/aliases.sh
+[ -f ~/bin/dotfiles/aliases.sh ] && . ~/bin/dotfiles/aliases.sh
     
 # Function definitions.
-[ -f ~/bin/bash/functions.sh ] && . ~/bin/bash/functions.sh
+[ -f ~/bin/dotfiles/functions.sh ] && . ~/bin/dotfiles/functions.sh
 
 # Prompt definitions.
-[ -f ~/bin/bash/prompt.sh ] && . ~/bin/bash/prompt.sh
+[ -f ~/bin/dotfiles/prompt.sh ] && . ~/bin/dotfiles/prompt.sh
