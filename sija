@@ -1,3 +1,0 @@
-#!/bin/bash
-sudo bash -c "sleep 10s; pm-suspend"
-#sudo pm-suspend

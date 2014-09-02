@@ -25,3 +25,5 @@ alias st='/opt/sublime_text/sublime_text'
 #alias gpu="nvidia-settings -q GPUCoreTemp | grep '0.0' | cut -d':' -f3 | cut -d'.' -f 1"
 
 alias subs='subliminal -l pl --color --'
+
+alias updatelog="tail /var/log/apt/term.log"
