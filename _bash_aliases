@@ -1,0 +1,42 @@
+alias ls='ls --color=auto --group-directories-first'
+alias grep='grep --color=auto'
+
+alias sudo='sudo -E '
+alias ll='ls -lAh'
+alias la='ls -A'
+alias l='ls -CF'
+alias cd..='cd ..'
+alias ..='cd ..'
+alias win='nautilus .'
+alias q='exit'
+alias uz='tar -xvzf'
+
+alias upd='sudo apt update'
+alias inst='sudo apt install'
+alias cln='sudo apt-get autoremove'
+
+alias st='/opt/sublime_text/sublime_text'
+alias updatelog="tail /var/log/apt/term.log"
+
+alias subs='subliminal -l pl --color --'
+
+
+alias pro='cd /mnt/Magazyn/Projects'
+
+
+# GIT
+alias ga='git add . --all'
+alias gb='git branch'
+alias gba='git branch -a | grep %*'
+alias gc='git commit -am %*'
+alias gp='git push'
+alias gs='git status -sb'
+alias gu='git pull'
+alias s='grunt serve'
+alias t='grunt test'
+
+alias log='git log -10 --date=short --abbrev-commit --pretty=format:"%Cred%h %Creset%ad %Cgreen%an %Creset%s %C(yellow)%cr%C(bold blue)%d%Creset"'
+alias logg='git log -10 --graph --date=short --abbrev-commit --branches --pretty=format:"%Cred%h %Creset%ad %Cgreen%an %Creset%s %C(yellow)%cr%C(bold blue)%d%Creset"'
+alias gdiff='git diff master@{1} master %*'
+
+

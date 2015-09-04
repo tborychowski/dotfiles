@@ -1,22 +1,26 @@
 #!/bin/bash
 
-# Install bash, zsh & rc files
-ln -sf $HOME/bin/dotfiles/bashrc.sh $HOME/.bashrc
+#mkdir $HOME/bin
+
+# Install dotfiles
+cp ./_bashrc $HOME/.bashrc
 echo -e "[OK] .bashrc"
 
-ln -sf $HOME/bin/dotfiles/nanorc.sh $HOME/.nanorc
+cp ./_nanorc $HOME/.nanorc
 echo -e "[OK] .nanorc"
 
-ln -sf $HOME/bin/dotfiles/vimrc.sh $HOME/.vimrc
+cp ./_vimrc $HOME/.vimrc
 echo -e "[OK] .vimrc"
 
 
 
 
 # install NANO syntax highlighting
-sed '/^include/d' $HOME/bin/dotfiles/nanorc.sh > $HOME/bin/dotfiles/nanorc.tmp
-cd $HOME/bin/dotfiles/nano-syntax
-ls *.nanorc | xargs -I {} echo 'include "~/bin/dotfiles/nano-syntax/{}"' >> $HOME/bin/dotfiles/nanorc.tmp
-mv $HOME/bin/dotfiles/nanorc.tmp $HOME/bin/dotfiles/nanorc.sh
+cp ./nano-syntax/* $HOME/bin/nano-syntax/
+
+sed '/^include/d' ./_nanorc > $HOME/_nanorc
+cd $HOME/bin/nano-syntax
+ls *.nanorc | xargs -I {} echo 'include "~/bin/nano-syntax/{}"' >> $HOME/_nanorc
+mv $HOME/_nanorc $HOME/.nanorc
 echo "[OK] nano syntax highlighting"
 
