@@ -80,7 +80,6 @@ function git_color {
   fi
 }
 
-
 function git_branch {
   local git_status="$(git status 2> /dev/null)"
   local on_branch="On branch ([^${IFS}]*)"
