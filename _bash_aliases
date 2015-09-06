@@ -12,8 +12,9 @@ alias q='exit'
 alias uz='tar -xvzf'
 
 alias upd='sudo apt update'
-alias inst='sudo apt install'
+alias rmv='sudo apt remove'
 alias cln='sudo apt-get autoremove'
+alias inst='sudo apt install'
 alias upgr='sudo apt upgrade'
 alias toupgr='sudo apt list --upgradable'
 
