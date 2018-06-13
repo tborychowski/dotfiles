@@ -3,7 +3,7 @@ dotfiles
 
 dotfiles configs
 
-##Install
+## Install
 ````sh
 git clone git@github.com:tborychowski/dotfiles.git
 cd dotfiles
